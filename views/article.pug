@@ -1,0 +1,8 @@
+extends layout
+block content
+	h1=article.title
+	h4 writtenby #{article.author}
+	p=article.body
+	hr
+	a.btn.btn-default(href='/article/edit/'+article._id) edit
+	a.btn.btn-danger.delete-article(href="#",data-id=article._id) Delete
